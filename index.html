@@ -3,81 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mein Shop - Bald verfügbar!</title>
-
-    <!-- Schriftart Oswald von Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
-
+    <title>Mein Shop – Bald verfügbar</title>
     <style>
+        /* Importiere die Schriftart Oswald */
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap');
+
         body {
-            font-family: 'Oswald', sans-serif; /* Oswald Schriftart */
+            font-family: 'Oswald', sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
-            margin: 0;
-            background: black;
-            color: #333;
-            text-align: center;
+            background: black
         }
 
+        /* Wrapper für zentrierte Container */
+        .container-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Allgemeiner Stil für Container */
         .container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
             max-width: 600px;
-            width: 100%;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            height: min-content;
         }
 
-        h1 {
+        /* Stil für das Logo mit türkisem Farbverlauf */
+        .logo-container {
+            position: relative;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #40E0D0 0%, #008080 100%); /* Türkiser Farbverlauf */
+            border-radius: 10px;
+            font-size: 26px;
+        }
+
+        .logo-container h1 {
+            font-size: 40px;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Text Container (unter dem Logo) */
+        .text-container p {
+            font-size: 18px;
             color: #333;
-            font-size: 2.5em; /* Größere Schrift für den Titel */
-            margin-bottom: 10px;
         }
 
-        p {
-            font-size: 1.2em;
-            color: #666;
-        }
-
-        .note {
-            font-style: italic;
-            color: #999;
-        }
-
-        .coming-soon {
-            font-weight: bold;
-            font-size: 1.5em;
-            color: #e74c3c;
-        }
-
-        /* Mobile Version: Container lässt kleine Ränder auf beiden Seiten */
+        /* Responsive Anpassung für mobile Geräte */
         @media (max-width: 768px) {
             .container {
-                width: 60%; /* Container nimmt 90% der Breite ein */
-                padding: 20px; /* Weniger Padding für mobile Geräte */
+                width: 80%;
+                
             }
 
-            h1 {
-                font-size: 2em; /* Etwas kleinere Schrift auf mobilen Geräten */
+            .logo-container h1 {
+                font-size: 36px;
             }
 
-            p {
-                font-size: 1em; /* Text kleiner auf mobilen Geräten */
+            .text-container p {
+                font-size: 16px;
             }
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Beschichter Scout</h1>
-        <p class="coming-soon">DIE NR.1 PLATTFORM für OBERFLÄCHENTECHNIK</p>
-        <p>Unsere Webseite ist momentan im Aufbau. Wir arbeiten daran,<br> dir bald unsere Plattform im vollen Umfang zu bieten.</p>
-        <p class="note">Bleib dran und komm später wieder!</p>
+    <div class="container-wrapper">
+        <!-- Logo Container -->
+        <div class="container logo-container">
+            <h1>Beschichter Scout</h1>
+            <p>Die Nr. 1 Plattform für Oberflächentechnik</p>
+        </div>
+        
+        <!-- Text Container mit Infos -->
+        <div class="container text-container">
+            <br><p>Unsere Webseite ist momentan im Aufbau. Wir arbeiten daran,
+                dir unsere Plattform bald im vollen Umfang zu bieten.</p>
+            <p>Bleib dran für Updates und spannende Neuigkeiten.</p><br>
+            
+        </div>
     </div>
-
 </body>
 </html>
